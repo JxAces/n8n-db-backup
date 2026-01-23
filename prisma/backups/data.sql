@@ -4,7 +4,7 @@ SET session_replication_role = replica;
 -- PostgreSQL database dump
 --
 
--- \restrict BsKh7dHSfkLZewLlY7SgHRGGTPNpbUjjAi4nRGaMfX9S4KI4w7hWfaLlNdKFuhO
+-- \restrict 99ycEdKvh7KfnZPE9qxd0kffQV4WCYUSjYT32FEv7P45BukG3GxZyNYpP8u13cN
 
 -- Dumped from database version 17.6
 -- Dumped by pg_dump version 17.6
@@ -1370,7 +1370,7 @@ workflow:editor	Workflow Editor	Workflow Editor	workflow	t	2026-01-19 10:51:19.0
 --
 
 COPY "public"."user" ("id", "email", "firstName", "lastName", "password", "personalizationAnswers", "createdAt", "updatedAt", "settings", "disabled", "mfaEnabled", "mfaSecret", "mfaRecoveryCodes", "lastActiveAt", "roleSlug") FROM stdin;
-e113cb61-8cfc-43af-8240-499bcc52911d	jesterflor@gmail.com	Jade Ace	Flor	$2a$10$0MXEzo2pU7Ir1VLZ/F4n/e5stabM5nYUv.CN0I0gczHDnjagaQxGu	{"version":"v4","personalization_survey_submitted_at":"2026-01-19T11:00:00.248Z","personalization_survey_n8n_version":"2.3.6","companyType":"saas"}	2026-01-19 10:47:00.508+00	2026-01-21 05:00:04.656+00	{"userActivated": false}	f	f	\N	\N	2026-01-21	global:owner
+e113cb61-8cfc-43af-8240-499bcc52911d	jesterflor@gmail.com	Jade Ace	Flor	$2a$10$0MXEzo2pU7Ir1VLZ/F4n/e5stabM5nYUv.CN0I0gczHDnjagaQxGu	{"version":"v4","personalization_survey_submitted_at":"2026-01-19T11:00:00.248Z","personalization_survey_n8n_version":"2.3.6","companyType":"saas"}	2026-01-19 10:47:00.508+00	2026-01-22 06:17:26.734+00	{"userActivated": false}	f	f	\N	\N	2026-01-22	global:owner
 \.
 
 
@@ -2642,8 +2642,6 @@ COPY "public"."workflow_dependency" ("id", "workflowId", "workflowVersionId", "d
 --
 
 COPY "public"."workflow_history" ("versionId", "workflowId", "authors", "createdAt", "updatedAt", "nodes", "connections", "name", "autosaved", "description") FROM stdin;
-d2caab51-cc02-4d38-93fa-831ebd5d641d	RggGT_5aJ9e-9zF5yIV0K	Jade Ace Flor	2026-01-21 03:32:23.876+00	2026-01-21 03:32:23.876+00	[{"parameters":{},"type":"n8n-nodes-base.manualTrigger","typeVersion":1,"position":[-448,-32],"id":"347e1b16-aa29-41b5-b2fa-c7f17ffa2985","name":"When clicking ‘Execute workflow’"}]	{}	\N	f	\N
-2c5029b0-b53c-4c9e-8e18-6d182d5f2189	RggGT_5aJ9e-9zF5yIV0K	Jade Ace Flor	2026-01-21 06:20:22.832+00	2026-01-21 06:20:22.832+00	[{"parameters":{"updates":["message"],"additionalFields":{}},"type":"n8n-nodes-base.telegramTrigger","typeVersion":1.2,"position":[-736,-64],"id":"2d3d2c44-fcea-43e2-8bf4-6b4ced6cfdac","name":"Telegram Trigger","webhookId":"d36cb3c2-7f9b-4ba0-9be4-855422ae2240","credentials":{"telegramApi":{"id":"KzfpV1o5qJHoSWfI","name":"Telegram account 2"}}},{"parameters":{"resource":"file","fileId":"={{ $json.message.document.file_id }}","additionalFields":{"mimeType":""}},"type":"n8n-nodes-base.telegram","typeVersion":1.2,"position":[-528,-64],"id":"e72015f9-5167-456c-ab53-e426945f7fa9","name":"Get a file","webhookId":"74abe4dd-6145-433e-8b4a-5ae07932833c","credentials":{"telegramApi":{"id":"KzfpV1o5qJHoSWfI","name":"Telegram account 2"}}},{"parameters":{"method":"POST","url":"https://api.ocr.space/parse/image","sendHeaders":true,"headerParameters":{"parameters":[{"name":"apikey","value":"K89574599388957"}]},"sendBody":true,"contentType":"multipart-form-data","bodyParameters":{"parameters":[{"parameterType":"formBinaryData","name":"file","inputDataFieldName":"data"}]},"options":{}},"type":"n8n-nodes-base.httpRequest","typeVersion":4.3,"position":[-320,-64],"id":"fc0bbe41-aae2-4ddd-938b-8a155547a336","name":"OCR.Space"}]	{"Telegram Trigger":{"main":[[{"node":"Get a file","type":"main","index":0}]]},"Get a file":{"main":[[{"node":"OCR.Space","type":"main","index":0}]]}}	\N	f	\N
 be5becd1-a0f2-4212-b360-943c1534f86e	RggGT_5aJ9e-9zF5yIV0K	Jade Ace Flor	2026-01-21 11:45:34.102+00	2026-01-21 11:45:34.102+00	[{"parameters":{"updates":["message"],"additionalFields":{}},"type":"n8n-nodes-base.telegramTrigger","typeVersion":1.2,"position":[-736,-64],"id":"2d3d2c44-fcea-43e2-8bf4-6b4ced6cfdac","name":"Telegram Trigger","webhookId":"d36cb3c2-7f9b-4ba0-9be4-855422ae2240","credentials":{"telegramApi":{"id":"KzfpV1o5qJHoSWfI","name":"Telegram account 2"}}},{"parameters":{"resource":"file","fileId":"={{ $json.message.document.file_id }}","additionalFields":{"mimeType":""}},"type":"n8n-nodes-base.telegram","typeVersion":1.2,"position":[-528,-64],"id":"e72015f9-5167-456c-ab53-e426945f7fa9","name":"Get a file","webhookId":"74abe4dd-6145-433e-8b4a-5ae07932833c","credentials":{"telegramApi":{"id":"KzfpV1o5qJHoSWfI","name":"Telegram account 2"}}},{"parameters":{"method":"POST","url":"https://api.ocr.space/parse/image","sendHeaders":true,"headerParameters":{"parameters":[{"name":"apikey","value":"K89574599388957"}]},"sendBody":true,"contentType":"multipart-form-data","bodyParameters":{"parameters":[{"parameterType":"formBinaryData","name":"file","inputDataFieldName":"data"}]},"options":{}},"type":"n8n-nodes-base.httpRequest","typeVersion":4.3,"position":[-320,-64],"id":"fc0bbe41-aae2-4ddd-938b-8a155547a336","name":"OCR.Space"},{"parameters":{},"type":"n8n-nodes-base.code","typeVersion":2,"position":[-112,-64],"id":"90718b48-1270-4f82-913b-333f6c148299","name":"Code in JavaScript"}]	{"Telegram Trigger":{"main":[[{"node":"Get a file","type":"main","index":0}]]},"Get a file":{"main":[[{"node":"OCR.Space","type":"main","index":0}]]},"OCR.Space":{"main":[[{"node":"Code in JavaScript","type":"main","index":0}]]}}	\N	f	\N
 \.
 
@@ -2905,6 +2903,6 @@ SELECT pg_catalog.setval('"public"."workflow_publish_history_id_seq"', 1, false)
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict BsKh7dHSfkLZewLlY7SgHRGGTPNpbUjjAi4nRGaMfX9S4KI4w7hWfaLlNdKFuhO
+-- \unrestrict 99ycEdKvh7KfnZPE9qxd0kffQV4WCYUSjYT32FEv7P45BukG3GxZyNYpP8u13cN
 
 RESET ALL;
