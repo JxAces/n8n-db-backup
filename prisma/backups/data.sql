@@ -4,7 +4,7 @@ SET session_replication_role = replica;
 -- PostgreSQL database dump
 --
 
--- \restrict 99ycEdKvh7KfnZPE9qxd0kffQV4WCYUSjYT32FEv7P45BukG3GxZyNYpP8u13cN
+-- \restrict p0wbxhgJaPZM269akqdr8fcb9g2wHQrOVqMSQg50Nf2FhOtSjMZfEcpWZxIvNZe
 
 -- Dumped from database version 17.6
 -- Dumped by pg_dump version 17.6
@@ -1370,7 +1370,7 @@ workflow:editor	Workflow Editor	Workflow Editor	workflow	t	2026-01-19 10:51:19.0
 --
 
 COPY "public"."user" ("id", "email", "firstName", "lastName", "password", "personalizationAnswers", "createdAt", "updatedAt", "settings", "disabled", "mfaEnabled", "mfaSecret", "mfaRecoveryCodes", "lastActiveAt", "roleSlug") FROM stdin;
-e113cb61-8cfc-43af-8240-499bcc52911d	jesterflor@gmail.com	Jade Ace	Flor	$2a$10$0MXEzo2pU7Ir1VLZ/F4n/e5stabM5nYUv.CN0I0gczHDnjagaQxGu	{"version":"v4","personalization_survey_submitted_at":"2026-01-19T11:00:00.248Z","personalization_survey_n8n_version":"2.3.6","companyType":"saas"}	2026-01-19 10:47:00.508+00	2026-01-22 06:17:26.734+00	{"userActivated": false}	f	f	\N	\N	2026-01-22	global:owner
+e113cb61-8cfc-43af-8240-499bcc52911d	jesterflor@gmail.com	Jade Ace	Flor	$2a$10$0MXEzo2pU7Ir1VLZ/F4n/e5stabM5nYUv.CN0I0gczHDnjagaQxGu	{"version":"v4","personalization_survey_submitted_at":"2026-01-19T11:00:00.248Z","personalization_survey_n8n_version":"2.3.6","companyType":"saas"}	2026-01-19 10:47:00.508+00	2026-01-23 09:41:44.767+00	{"userActivated": false}	f	f	\N	\N	2026-01-23	global:owner
 \.
 
 
@@ -2903,6 +2903,6 @@ SELECT pg_catalog.setval('"public"."workflow_publish_history_id_seq"', 1, false)
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict 99ycEdKvh7KfnZPE9qxd0kffQV4WCYUSjYT32FEv7P45BukG3GxZyNYpP8u13cN
+-- \unrestrict p0wbxhgJaPZM269akqdr8fcb9g2wHQrOVqMSQg50Nf2FhOtSjMZfEcpWZxIvNZe
 
 RESET ALL;
