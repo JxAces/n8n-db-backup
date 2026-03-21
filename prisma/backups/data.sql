@@ -4,7 +4,7 @@ SET session_replication_role = replica;
 -- PostgreSQL database dump
 --
 
--- \restrict tA2WkQzDqomJwr1aEcp7IScJkOR2uiq79P75M8idkB6vVT5Cxljm9rNIlIQ7TuN
+-- \restrict uP2ZhWyAJnpiKBZemqwVbtuAvSnka3lTQv11noGTWWvCewwV2jariOs48TDTWI5
 
 -- Dumped from database version 17.6
 -- Dumped by pg_dump version 17.6
@@ -178,6 +178,22 @@ COPY "auth"."saml_relay_states" ("id", "sso_provider_id", "request_id", "for_ema
 --
 
 COPY "auth"."sso_domains" ("id", "sso_provider_id", "domain", "created_at", "updated_at") FROM stdin;
+\.
+
+
+--
+-- Data for Name: webauthn_challenges; Type: TABLE DATA; Schema: auth; Owner: supabase_auth_admin
+--
+
+COPY "auth"."webauthn_challenges" ("id", "user_id", "challenge_type", "session_data", "created_at", "expires_at") FROM stdin;
+\.
+
+
+--
+-- Data for Name: webauthn_credentials; Type: TABLE DATA; Schema: auth; Owner: supabase_auth_admin
+--
+
+COPY "auth"."webauthn_credentials" ("id", "user_id", "credential_id", "public_key", "attestation_type", "aaguid", "sign_count", "transports", "backup_eligible", "backed_up", "friendly_name", "created_at", "updated_at", "last_used_at") FROM stdin;
 \.
 
 
@@ -2991,6 +3007,6 @@ SELECT pg_catalog.setval('"public"."workflow_statistics_id_seq"', 3, true);
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict tA2WkQzDqomJwr1aEcp7IScJkOR2uiq79P75M8idkB6vVT5Cxljm9rNIlIQ7TuN
+-- \unrestrict uP2ZhWyAJnpiKBZemqwVbtuAvSnka3lTQv11noGTWWvCewwV2jariOs48TDTWI5
 
 RESET ALL;
